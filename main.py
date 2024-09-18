@@ -50,8 +50,8 @@ def pull_and_upload_data(year, grade):
     print(f'Starting to upload data for {year}: ', end='')
     s3_response = S3.put_object(
         Bucket=BUCKET_NAME,
-        Key=f'prek_enrollment_{year}.json',
-        Body='[' + ', \n'.join(js) + ']'
+        Key=f'data/prek_enrollment_{year}.json',
+        Body='\n'.join(js)
     )
     http_response = s3_response.get('ResponseMetadata')
     # Verifying that processed data has been uploaded to AWS bucket
