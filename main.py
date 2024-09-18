@@ -4,7 +4,7 @@ import json
 import os
 import requests
 
-API_URL = "https://educationdata.urban.org/api/v1/schools/ccd/enrollment/{year}/{grade}/"
+API_URL = 'https://educationdata.urban.org/api/v1/schools/ccd/enrollment/{year}/{grade}/'
 GRADE = 'grade-pk'
 
 load_dotenv()
