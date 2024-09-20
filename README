@@ -1,0 +1,17 @@
+Tools / Technologies used:
+	- Python packages:
+		- boto3: Amazon's AWS SDK to allow communicating with AWS services from within Python
+		- dotenv: It's unsafe to hardcode API keys directly in the Python script. This package allows creating a .env file where I can store those sensitive pieces of data. The .env file itself is not pushed to Github.
+		- json: Allows working with JSON data.
+		- os: Allows pulling the API keys from the .env file.
+		- requests: Allows making HTTP requests (in this case, the API calls).
+	- AWS:
+		- S3: Easy to store raw data
+		- Athena: Serverless SQL solution that seamlessly integrates with S3.
+
+If I had more time, I would:
+	- Add better error handling. The current implementation does some basic checks such as:
+		- Verifying that the record count in the API call matches the record count that will be uploaded to S3.
+		- Error handling for the API call (requests.exceptions.RequestException).
+		- Verifying that data was successfully uploaded to the S3 bucket.
+	- Add data visualizations
