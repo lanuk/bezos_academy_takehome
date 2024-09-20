@@ -107,7 +107,13 @@ VALUES
 (-3,'Suppressed data')
 ;
 
-/* 10 states with highest number of children enrolled in Pre-K in 2021 */
+/* 10 states with highest number of children enrolled in Pre-K in 2021:
+    1. Texas        6. Georgia
+    2. Illinois     7. New Jersey
+    3. Florida      8. Ohio
+    4. New York     9. Oklahoma
+    5. Wisconsin    10. Virginia
+*/
 SELECT
     f.state,
     SUM(e.enrollment) AS enrollment
