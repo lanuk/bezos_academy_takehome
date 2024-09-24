@@ -123,6 +123,11 @@ LEFT JOIN
     fips_mapping f ON e.fips = f.fips
 WHERE
     e.year = 2021
+    AND (
+        (f.fips NOT IN (3, 7, 11, 14, 43, 52))
+        AND
+        (f.fips between 1 and 56)
+    ) 
 GROUP BY
     f.state
 ORDER BY
