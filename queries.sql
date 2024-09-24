@@ -126,7 +126,7 @@ WHERE
     AND (
         (f.fips NOT IN (3, 7, 11, 14, 43, 52))
         AND
-        (f.fips between 1 and 56)
+        (f.fips BETWEEN 1 AND 56)
     ) 
 GROUP BY
     f.state
